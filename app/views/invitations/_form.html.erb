@@ -2,29 +2,23 @@
 
     <%= f.input :name, :label => 'Titre'%><br />
 
-    <%= f.input :date %><br />
+    <%= f.input :date, :as => :text %><br />
 
-    <%= f.input :description %><br />
+    <%= f.input :description, :as => :text %><br />
 
     <%= f.input :convives, :collection => 1..100, :include_blank => false, :label => 'Nombre de convives'%><br />
 
     <%= f.input :price, :collection => 1..100, :include_blank => false, :label => 'Prix', :hint => 'Prix en euros'%><br />
  
-    <%= f.input :tag, :label => 'Tag' %><br />
+    <!--<%= f.input :tag, :label => 'Tag' %><br />-->
 
-    <%= f.input :note, :collection => 1..10, :as => :radio, :include_blank => false, :label => 'Evaluation'%><br />
+    <!--<%= f.input :note, :collection => 1..10, :as => :radio, :include_blank => false, :label => 'Evaluation'%><br />-->
 
-    <%= f.input :comment, :label => 'Commentaire'%><br />
+    <!--<%= f.input :comment, :label => 'Commentaire'%><br />-->
 
-  <div class="field">
-	Cuisine :
-	<%= select_tag("invitation[cuisine_ids][]", options_from_collection_for_select(Cuisine.all, 'id', "name"), {:include_blank => false}) %><br />
-  </div>
+	<%= f.association :cuisines, :collection => Cuisine.all(:order => 'name') %>
 
-  <div class="field">
-	Ambiance :
-	<%= select_tag("invitation[ambiance_ids][]", options_from_collection_for_select(Ambiance.all, 'id', "name"), {:include_blank => false}) %><br />
-  </div>
+	<%= f.association :ambiances, :collection => Ambiance.all(:order => 'name')%>
 
     <%= f.button :submit, 'Créer une invitation' %><br />
  
