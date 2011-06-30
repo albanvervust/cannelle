@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ambiance :</b>
+  <%= @ambiance.name %>
+</p>
+
+<p>
+  <b>Description :</b>
+  <%= @ambiance.description %>
+</p>
+
+
+<%= link_to 'Modifier', edit_ambiance_path(@ambiance) %> |
+<%= link_to 'Retour', ambiances_path %>

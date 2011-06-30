@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Invitation :</b>
+  <%= @invitation.name %>
+</p>
+
+<p>
+  <b>Date :</b>
+  <%= @invitation.date %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @invitation.description %>
+</p>
+
+<p>
+  <b>Convives :</b>
+  <%= @invitation.convives %>
+</p>
+
+<p>
+  <b>Prix :</b>
+  <%= @invitation.price %>
+</p>
+
+<p>
+  <b>Tag(s) :</b>
+  <%= @invitation.tag %>
+</p>
+
+<p>
+  <b>Evaluation :</b>
+  <%= @invitation.note %>
+</p>
+
+<p>
+  <b>Commentaire :</b>
+  <%= @invitation.comment %>
+</p>
+
+<p>
+	<b>Cuisines :</b>
+	<% for cuisines in @invitation.cuisines %>
+		<%= cuisines.name %>
+	<% end %>
+</p>
+
+<p>
+	<b>Ambiances :</b>
+	<% for ambiances in @invitation.ambiances %>
+		<%= ambiances.name %>
+	<% end %>
+</p>
+
+
+<%= link_to 'Modifier', edit_invitation_path(@invitation) %> |
+<%= link_to 'Retour', invitations_path %>

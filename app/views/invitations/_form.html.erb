@@ -1,0 +1,31 @@
+<%= simple_form_for(@invitation) do |f| %><br />
+
+    <%= f.input :name, :label => 'Titre'%><br />
+
+    <%= f.input :date %><br />
+
+    <%= f.input :description %><br />
+
+    <%= f.input :convives, :collection => 1..100, :include_blank => false, :label => 'Nombre de convives'%><br />
+
+    <%= f.input :price, :collection => 1..100, :include_blank => false, :label => 'Prix', :hint => 'Prix en euros'%><br />
+ 
+    <%= f.input :tag, :label => 'Tag' %><br />
+
+    <%= f.input :note, :collection => 1..10, :as => :radio, :include_blank => false, :label => 'Evaluation'%><br />
+
+    <%= f.input :comment, :label => 'Commentaire'%><br />
+
+  <div class="field">
+	Cuisine :
+	<%= select_tag("invitation[cuisine_ids][]", options_from_collection_for_select(Cuisine.all, 'id', "name"), {:include_blank => false}) %><br />
+  </div>
+
+  <div class="field">
+	Ambiance :
+	<%= select_tag("invitation[ambiance_ids][]", options_from_collection_for_select(Ambiance.all, 'id', "name"), {:include_blank => false}) %><br />
+  </div>
+
+    <%= f.button :submit, 'Créer une invitation' %><br />
+ 
+<% end %>

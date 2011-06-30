@@ -1,6 +1,6 @@
 module ApplicationHelper
   def title
-    base_title = "c-est-moi-qui-invite"
+    base_title = "j-invite-ce-soir"
     if @title.nil?
       base_title
     else

@@ -1,5 +1,11 @@
 Cannelle::Application.routes.draw do
   
+  resources :invitations
+
+  resources :ambiances
+
+  resources :cuisines
+
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/aide',    :to => 'pages#aide'

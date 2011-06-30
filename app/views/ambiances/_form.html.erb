@@ -1,0 +1,11 @@
+<%= simple_form_for(@ambiance) do |f| %><br />
+
+<%= f.error_messages %>
+
+    <%= f.input :name, :label => 'Ambiance'%><br />
+
+    <%= f.input :description %><br />
+
+    <%= f.button :submit, 'Créer' %><br />
+
+<% end %>
