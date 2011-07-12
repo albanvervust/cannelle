@@ -6,9 +6,10 @@ Cannelle::Application.routes.draw do
 
   resources :cuisines
 
-  match '/contact', :to => 'pages#contact'
-  match '/about',   :to => 'pages#about'
-  match '/aide',    :to => 'pages#aide'
+  match '/contact',   :to => 'pages#contact'
+  match '/about',     :to => 'pages#about'
+  match '/aide',      :to => 'pages#aide'
+  match '/invitations', :to => 'invitations#index'
   
   root :to => 'pages#home'  
   

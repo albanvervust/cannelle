@@ -1,10 +1,11 @@
 <header>
-<% citiz = image_tag("logo.png", :alt => "stat_app", :class => "round") -%>
-<%= link_to citiz, root_path -%>
+<% imglogo = image_tag("logo.png", :alt => "stat_app", :class => "round") -%>
+<%= link_to imglogo, root_path -%>
 <nav class="round">
       <ul>
         <li><%= link_to "Accueil", root_path -%></li>
         <li><%= link_to "Contactez-nous", contact_path -%></li>
+		<li><%= link_to "Liste des invitations", invitations_path -%></li>
       </ul>
 </nav>
 </header>
