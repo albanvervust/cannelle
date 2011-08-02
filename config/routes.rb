@@ -1,5 +1,7 @@
 Cannelle::Application.routes.draw do
   
+  devise_for :users
+
   resources :invitations
 
   resources :ambiances

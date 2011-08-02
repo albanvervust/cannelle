@@ -2,10 +2,18 @@
 <% imglogo = image_tag("logo.png", :alt => "stat_app", :class => "round") -%>
 <%= link_to imglogo, root_path -%>
 <nav class="round">
-      <ul>
+<ul>
         <li><%= link_to "Accueil", root_path -%></li>
         <li><%= link_to "Contactez-nous", contact_path -%></li>
 		<li><%= link_to "Liste des invitations", invitations_path -%></li>
-      </ul>
+	<div id="user_nav">
+		  <% if user_signed_in? %>
+		    Signed in as <%= current_user.email %>. Not you?
+		    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+		  <% else %>
+		    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+		  <% end %>      
+	</div>
+</ul>
 </nav>
 </header>

@@ -1,6 +1,5 @@
 .container {
-  width: 900px;
-  
+  width: 900px; 
 }
 
 body {
@@ -46,6 +45,18 @@ a:visited {
 }
 
 /* Navigation */
+
+#user_nav{
+	text-align: right;
+	margin: 0;
+  	padding: 0;
+  	list-style-type: none;
+  	display: inline-block;
+  	padding: 0.2em 0;
+  	padding: 0 5px;
+  	font-weight: bold;
+	color:#77bcd6;
+}
 
 nav {
   position: relative;
