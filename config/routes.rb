@@ -1,6 +1,6 @@
 Cannelle::Application.routes.draw do
   
-  devise_for :users
+  devise_for :users, :path_names => { :sign_up => "inscription", :sign_in => "identification"}
 
   resources :invitations
 
