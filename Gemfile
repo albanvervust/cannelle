@@ -8,7 +8,8 @@ gem 'rails', '3.0.5'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'simple_form'
 gem 'jquery-rails'
-gem 'devise', '1.1.rc0'
+gem 'devise', '1.1.2'
+
 
 group :development do
 	gem 'annotate-models', '1.0.4'
