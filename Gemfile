@@ -9,7 +9,6 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'simple_form'
 gem 'jquery-rails'
 gem 'devise', '1.1.2'
-gem "rake", '0.9.2'
 
 
 group :development do
