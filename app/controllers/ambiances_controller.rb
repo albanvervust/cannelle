@@ -44,7 +44,7 @@ class AmbiancesController < ApplicationController
 
     respond_to do |format|
       if @ambiance.save
-        format.html { redirect_to(@ambiance, :notice => 'L ambiance a été créée.') }
+        format.html { redirect_to(@ambiance, :notice => 'L ambiance a ete creee.') }
         format.xml  { render :xml => @ambiance, :status => :created, :location => @ambiance }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class AmbiancesController < ApplicationController
 
     respond_to do |format|
       if @ambiance.update_attributes(params[:ambiance])
-        format.html { redirect_to(@ambiance, :notice => 'L ambiance a été modifiée.') }
+        format.html { redirect_to(@ambiance, :notice => 'L ambiance a ete modifiee.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
