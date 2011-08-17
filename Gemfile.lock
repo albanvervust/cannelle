@@ -89,6 +89,5 @@ DEPENDENCIES
   devise (= 1.1.2)
   jquery-rails
   rails (= 3.0.5)
-  rake (= 0.9.2)
   simple_form
   sqlite3-ruby
